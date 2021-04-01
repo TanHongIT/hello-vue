@@ -21,3 +21,13 @@
             viet tat: v-on:click -> @click
         +Prevent default event:
             + huy bo event mac dinh cua element di -> lamf tiep cai gi do theo y thich
+
++ ref:
+    Anh xa den chinh element
+
++Conditional rendering:
+    + v-show: an/hien 1 element theo dieu kien
+    + v-hide
+    + v-if
+    + v-else-if
+        +v-el (else)

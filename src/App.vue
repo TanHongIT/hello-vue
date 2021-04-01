@@ -47,8 +47,14 @@
       </form>
     </div>
 
-    
-
+    <hr />
+    <div>
+      <div v-if="isShow">Lap trinh vien</div>
+      <button @click="(isShow = !isShow)">
+        <span v-if="isShow">An</span>
+        <span v-else>Hien</span>
+      </button>
+    </div>
   </div>
 </template>
 
@@ -57,6 +63,7 @@ export default {
   data() {
     return {
       inputDisabled: true,
+      isShow: true,
       selected: true,
       changemane: "Gau gau",
       changemanes: ["Gau gau 1", "Gau gau 2"],
