@@ -36,6 +36,19 @@
       <button v-on:click="channel.name = 'Aaaaaa'">Go</button>
       <button v-on:mouseover="channel.name = 'Aaaaaa'">Go</button>
     </div>
+
+    <hr />
+    <div>
+      <form action="/abc">
+        <input type="text" v-model="channel.name" />
+        <button type="submit" v-on:click.prevent="channel.name = 'Aaaaaa'">
+          Send
+        </button>
+      </form>
+    </div>
+
+    
+
   </div>
 </template>
 
