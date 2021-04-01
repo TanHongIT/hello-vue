@@ -2,7 +2,10 @@
   <div id="app">
     <!--root element -->
     <div >
-      <h1 :id="id">lap trinh vien</h1>
+      <h1 :class="{daChon: selected}">lap trinh vien</h1>
+       <button @click="selected = !selected">Doi mau</button> 
+
+      <hr>
       <input type="text" :disabled="inputDisabled">
       <button @click="inputDisabled = !inputDisabled">Mo khoa</button> <!--chu y co : -->
     </div>
@@ -14,12 +17,15 @@
 export default {
   data() {
     return {
-      id: 'gaugau',
-      inputDisabled: true
+      inputDisabled: true,
+      selected: true,
     };
   },
 };
 </script>
 
 <style>
+.daChon{
+  color: red;
+}
 </style>

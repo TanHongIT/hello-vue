@@ -7,6 +7,6 @@
 + binding:
     + value binding: {{ }}
     property binding:
-    v-bind:[tenthuoctinh]="dgrere" 
+    v-bind:[tenthuoctinh]="dgrere" (id, class, style,...)
         + viet tat (co the viet :[tenthuoctinh] khong can v-bind)
 
