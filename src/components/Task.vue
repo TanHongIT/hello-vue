@@ -6,7 +6,11 @@
 
 <script>
 export default {
-  props: ["taskdata"],
+  props: {
+    taskdata: {
+      type: Object,
+    },
+  },
   data() {
     return {
       content: "abc",
