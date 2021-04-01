@@ -43,3 +43,8 @@
 
 +hood:
     mounted
+
+Props:
+    Dua du lieu day tu component cha sang component con
+    Cach khai bao:
+        +dung mang ten cac prop

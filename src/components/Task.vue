@@ -1,11 +1,12 @@
 <template>
   <div class="Menu">
-      <span>abcd</span>
+    <span>{{ taskdata.content }}</span>
   </div>
 </template>
 
 <script>
 export default {
+  props: ["taskdata"],
   data() {
     return {
       content: "abc",

@@ -1,7 +1,7 @@
 <template>
   <!--root element -->
   <div id="app">
-    <Task v-for="(task, index) in tasks" :key="index"/>
+    <Task v-for="(task, index) in tasks" :key="index" :taskdata="task"/>
   </div>
 </template>
 
