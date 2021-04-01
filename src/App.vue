@@ -1,15 +1,22 @@
 <template>
+  <!--root element -->
   <div id="app">
-    <!--root element -->
-    <div >
-      <h1 :class="{daChon: selected}">lap trinh vien</h1>
-       <button @click="selected = !selected">Doi mau</button> 
+    <div>
+      <h1 :class="{ daChon: selected }">lap trinh vien</h1>
+      <button @click="selected = !selected">Doi mau</button>
 
-      <hr>
-      <input type="text" :disabled="inputDisabled">
-      <button @click="inputDisabled = !inputDisabled">Mo khoa</button> <!--chu y co : -->
+      <hr />
+      <input type="text" :disabled="inputDisabled" />
+      <button @click="inputDisabled = !inputDisabled">Mo khoa</button>
+      <!--chu y co : -->
     </div>
 
+    <hr />
+    <div>
+      <input type="text" v-model="changemane" />
+      {{ changemane }}
+    </div>
+    
   </div>
 </template>
 
@@ -19,13 +26,14 @@ export default {
     return {
       inputDisabled: true,
       selected: true,
+      changemane: "Gau gau",
     };
   },
 };
 </script>
 
 <style>
-.daChon{
+.daChon {
   color: red;
 }
 </style>
