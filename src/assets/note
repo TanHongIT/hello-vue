@@ -31,5 +31,9 @@
     + v-if
     + v-else-if
         +v-el (else)
+
 +list rendering:
     +v-for
+
++methods:
+    +function cua vue object

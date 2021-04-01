@@ -70,6 +70,17 @@
         <span :class="{done: task.done}">{{ task.content }}</span>
       </div>
     </div>
+
+    <hr />
+    <div>
+      <input type="text" v-model="newTask">
+      <button @click="tasks2.push({ content: newTask, done: false})">Add</button>
+      <div v-for="(task, index) in tasks2" :key="index">
+        <input type="checkbox" v-model="task.done" />
+        <span :class="{done: task.done}">{{ task.content }}</span>
+      </div>
+    </div>
+
   </div>
 </template>
 
@@ -96,6 +107,8 @@ export default {
         { content: "code", done: false },
         { content: "di ve sinh", done: false },
       ],
+
+      newTask: ''
     };
   },
 };
