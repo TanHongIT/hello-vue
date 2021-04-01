@@ -1,11 +1,10 @@
 <template>
   <div id="app">
     <!--root element -->
-    <div v-show="isShow">
-      <h1>lap trinh vien</h1>
+    <div >
+      <h1 v-bind:id="id">lap trinh vien</h1>
     </div>
 
-    <button @click="isShow = !isShow ">An/hien</button>
   </div>
 </template>
 
@@ -13,7 +12,7 @@
 export default {
   data() {
     return {
-      isShow: true,
+      id: 'gaugau'
     };
   },
 };
