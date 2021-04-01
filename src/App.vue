@@ -24,6 +24,12 @@
       {{changemanes}}
     </div>
 
+    <hr>
+    <div>
+      <input type="text" v-model="channel.name"/>
+      {{channel.name}}
+    </div>
+
   </div>
 </template>
 
@@ -37,7 +43,10 @@ export default {
       changemanes: [
         "Gau gau 1",
         "Gau gau 2"
-      ]
+      ],
+      channel: {  //object
+        name: 'Gau gau'
+      }
     };
   },
 };
