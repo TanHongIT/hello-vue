@@ -10,3 +10,6 @@
     v-bind:[tenthuoctinh]="dgrere" (id, class, style,...)
         + viet tat (co the viet :[tenthuoctinh] khong can v-bind)
 +model: lien ket element voi property
++event handing:
+    +bat su kien tu cac element
+        v-on:[ten su kien]="sgtregre"

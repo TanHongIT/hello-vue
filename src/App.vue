@@ -17,19 +17,25 @@
       {{ changemane }}
     </div>
 
-    <hr>
+    <hr />
     <div>
-      <input type="text" v-model="changemanes[0]"/>
-      <input type="text" v-model="changemanes[1]"/>
-      {{changemanes}}
+      <input type="text" v-model="changemanes[0]" />
+      <input type="text" v-model="changemanes[1]" />
+      {{ changemanes }}
     </div>
 
-    <hr>
+    <hr />
     <div>
-      <input type="text" v-model="channel.name"/>
-      {{channel.name}}
+      <input type="text" v-model="channel.name" />
+      {{ channel.name }}
     </div>
 
+    <hr />
+    <div>
+      <input type="text" v-model="channel.name" />
+      <button v-on:click="channel.name = 'Aaaaaa'">Go</button>
+      <button v-on:mouseover="channel.name = 'Aaaaaa'">Go</button>
+    </div>
   </div>
 </template>
 
@@ -40,13 +46,11 @@ export default {
       inputDisabled: true,
       selected: true,
       changemane: "Gau gau",
-      changemanes: [
-        "Gau gau 1",
-        "Gau gau 2"
-      ],
-      channel: {  //object
-        name: 'Gau gau'
-      }
+      changemanes: ["Gau gau 1", "Gau gau 2"],
+      channel: {
+        //object
+        name: "Gau gau",
+      },
     };
   },
 };
