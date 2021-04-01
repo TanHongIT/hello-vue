@@ -16,7 +16,14 @@
       <input type="text" v-model="changemane" />
       {{ changemane }}
     </div>
-    
+
+    <hr>
+    <div>
+      <input type="text" v-model="changemanes[0]"/>
+      <input type="text" v-model="changemanes[1]"/>
+      {{changemanes}}
+    </div>
+
   </div>
 </template>
 
@@ -27,6 +34,10 @@ export default {
       inputDisabled: true,
       selected: true,
       changemane: "Gau gau",
+      changemanes: [
+        "Gau gau 1",
+        "Gau gau 2"
+      ]
     };
   },
 };
