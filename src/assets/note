@@ -1,0 +1,12 @@
++ roor element: require
+
++ 2 ways binding:
+    +bind du lieu 2 chieu
++ phu thuoc vao kieu cua element
++lifrcycle: vong doi cua component trong vue
++ binding:
+    + value binding: {{ }}
+    property binding:
+    v-bind:[tenthuoctinh]="dgrere" 
+        + viet tat (co the viet :[tenthuoctinh] khong can v-bind)
+

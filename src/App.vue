@@ -2,7 +2,9 @@
   <div id="app">
     <!--root element -->
     <div >
-      <h1 v-bind:id="id">lap trinh vien</h1>
+      <h1 :id="id">lap trinh vien</h1>
+      <input type="text" :disabled="inputDisabled">
+      <button @click="inputDisabled = !inputDisabled">Mo khoa</button> <!--chu y co : -->
     </div>
 
   </div>
@@ -12,7 +14,8 @@
 export default {
   data() {
     return {
-      id: 'gaugau'
+      id: 'gaugau',
+      inputDisabled: true
     };
   },
 };
