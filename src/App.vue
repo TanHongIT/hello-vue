@@ -67,20 +67,33 @@
     <div>
       <div v-for="(task, index) in tasks2" :key="index">
         <input type="checkbox" v-model="task.done" />
-        <span :class="{done: task.done}">{{ task.content }}</span>
+        <span :class="{ done: task.done }">{{ task.content }}</span>
       </div>
     </div>
 
     <hr />
     <div>
-      <input type="text" v-model="newTask">
-      <button @click="tasks2.push({ content: newTask, done: false})">Add</button>
+      <input type="text" v-model="newTask" />
+      <button @click="tasks2.push({ content: newTask, done: false })">
+        Add
+      </button>
       <div v-for="(task, index) in tasks2" :key="index">
         <input type="checkbox" v-model="task.done" />
-        <span :class="{done: task.done}">{{ task.content }}</span>
+        <span :class="{ done: task.done }">{{ task.content }}</span>
       </div>
     </div>
 
+    <!-- ------------------------- -->
+    <!-- method -->
+    <hr />
+    <div>
+      <input type="text" v-model="newTask" />
+      <button @click="addTask()">Add</button>
+      <div v-for="(task, index) in task3" :key="index">
+        <input type="checkbox" v-model="task.done" />
+        <span :class="{ done: task.done }">{{ task.content }}</span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -108,8 +121,19 @@ export default {
         { content: "di ve sinh", done: false },
       ],
 
-      newTask: ''
+      newTask: "",
+
+      task3: [],
     };
+  },
+
+  methods: {
+    addTask: function () {
+      this.task3.push({
+        content: this.newTask,
+        done: false,
+      });
+    },
   },
 };
 </script>
@@ -118,7 +142,7 @@ export default {
 .daChon {
   color: red;
 }
-.done{
+.done {
   text-decoration: line-through;
 }
 </style>
