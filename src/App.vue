@@ -50,7 +50,7 @@
     <hr />
     <div>
       <div v-if="isShow">Lap trinh vien</div>
-      <button @click="(isShow = !isShow)">
+      <button @click="isShow = !isShow">
         <span v-if="isShow">An</span>
         <span v-else>Hien</span>
       </button>
@@ -59,14 +59,18 @@
     <hr />
     <div>
       <div v-for="(index, task) in tasks" :key="index">
-        {{task}} - {{index}}
+        {{ task }} - {{ index }}
       </div>
     </div>
 
-
-
+    <hr />
+    <div>
+      <div v-for="(task, index) in tasks2" :key="index">
+        <input type="checkbox" v-model="task.done" />
+        <span :class="{done: task.done}">{{ task.content }}</span>
+      </div>
+    </div>
   </div>
-
 </template>
 
 <script>
@@ -84,12 +88,14 @@ export default {
         name: "Gau gau",
       },
 
-      tasks:[
-        'di choi',
-        'nau an',
-        'code',
-        'di ve sinh'
-      ]
+      tasks: ["di choi", "nau an", "code", "di ve sinh"],
+
+      tasks2: [
+        { content: "di choi", done: false },
+        { content: "nau an", done: false },
+        { content: "code", done: false },
+        { content: "di ve sinh", done: false },
+      ],
     };
   },
 };
@@ -98,5 +104,8 @@ export default {
 <style>
 .daChon {
   color: red;
+}
+.done{
+  text-decoration: line-through;
 }
 </style>
