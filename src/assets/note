@@ -40,3 +40,6 @@
 
 +watch
     Thao doi su thay doi cua data
+
++hood:
+    mounted

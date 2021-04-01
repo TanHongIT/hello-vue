@@ -140,6 +140,10 @@ export default {
     newTask: function(){
       console.log('new task change');
     }
+  },
+
+  mounted(){
+
   }
 };
 </script>
