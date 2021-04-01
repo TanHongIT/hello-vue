@@ -1,29 +1,22 @@
 <template>
   <!--root element -->
   <div id="app">
-    <Task v-for="(task, index) in tasks" :key="index" :taskdata="task"/>
-    <hr>
-    <TagSelector/>
+    {{tongtien | dauphancach}}
+    <button @click="tongtien+=20000">add</button>
   </div>
 </template>
 
 <script>
-import Task from './components/Task';
-import TagSelector from './components/TagSelector';
 export default {
   data(){
     return{
-      tasks: [
-        { content: "di choi", done: false },
-        { content: "nau an", done: false },
-        { content: "code", done: false },
-        { content: "di ve sinh", done: false },
-      ]
+      tongtien: 1000000
     }
   },
-  components:{
-    Task,
-    TagSelector
+  filters:{
+    dauphancach: function(sotien){
+      return sotien.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+    }
   }
 };
 </script>

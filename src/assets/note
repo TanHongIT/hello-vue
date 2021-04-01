@@ -54,4 +54,5 @@ Props:
 
 Event:
 
-filter
+filter: 
+    bien doi du lieu truoc khi no dc render
