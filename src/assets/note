@@ -37,3 +37,6 @@
 
 +methods:
     +function cua vue object
+
++watch
+    Thao doi su thay doi cua data

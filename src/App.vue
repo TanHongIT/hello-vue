@@ -135,6 +135,12 @@ export default {
       });
     },
   },
+
+  watch:{
+    newTask: function(){
+      console.log('new task change');
+    }
+  }
 };
 </script>
 
