@@ -1,3 +1,7 @@
+data = state
+vueX = redux
+vue router = router
+
 + roor element: require
 
 + 2 ways binding:
