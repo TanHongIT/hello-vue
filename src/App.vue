@@ -55,7 +55,18 @@
         <span v-else>Hien</span>
       </button>
     </div>
+
+    <hr />
+    <div>
+      <div v-for="(index, task) in tasks" :key="index">
+        {{task}} - {{index}}
+      </div>
+    </div>
+
+
+
   </div>
+
 </template>
 
 <script>
@@ -67,10 +78,18 @@ export default {
       selected: true,
       changemane: "Gau gau",
       changemanes: ["Gau gau 1", "Gau gau 2"],
+
       channel: {
         //object
         name: "Gau gau",
       },
+
+      tasks:[
+        'di choi',
+        'nau an',
+        'code',
+        'di ve sinh'
+      ]
     };
   },
 };
