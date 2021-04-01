@@ -2,11 +2,14 @@
   <!--root element -->
   <div id="app">
     <Task v-for="(task, index) in tasks" :key="index" :taskdata="task"/>
+    <hr>
+    <TagSelector/>
   </div>
 </template>
 
 <script>
 import Task from './components/Task';
+import TagSelector from './components/TagSelector';
 export default {
   data(){
     return{
@@ -19,7 +22,8 @@ export default {
     }
   },
   components:{
-    Task
+    Task,
+    TagSelector
   }
 };
 </script>
